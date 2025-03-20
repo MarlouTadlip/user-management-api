@@ -2,9 +2,9 @@
     "type": "mysql",
     "host": "localhost",
     "port": 3306,
-    "username": "your-database-username",
-    "password": "your-database-password",
-    "database": "user_management_db",
+    "username": "root",
+    "password": "",
+    "database": "groupdb",
     "entities": [
       "src/entities/*.ts"
     ],
