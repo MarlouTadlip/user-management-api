@@ -5,6 +5,10 @@ import { AppDataSource } from "./data-source";
 const app = express();
 const port = 3000;
 
+//middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/users", userRouter);
 AppDataSource.initialize().then(() => {
   console.log("Database connected");
