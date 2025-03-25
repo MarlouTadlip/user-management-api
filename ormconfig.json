@@ -1,13 +1,11 @@
 {
-    "type": "mysql",
-    "host": "localhost",
-    "port": 3306,
-    "username": "your-database-username",
-    "password": "your-database-password",
-    "database": "user_management_db",
-    "entities": [
-      "src/entities/*.ts"
-    ],
-    "synchronize": true,
-    "logging": true
-  }
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "",
+  "database": "user_management_db",
+  "entities": ["src/entities/*.ts"],
+  "synchronize": true,
+  "logging": true
+}
