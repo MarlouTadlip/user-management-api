@@ -1,11 +1,15 @@
-import express from 'express'
-import { userRouter } from './routes/user.routes'
+import express from "express";
+import { userRouter } from "./routes/user.routes";
+import { AppDataSource } from "./data-source";
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
-app.use('/users', userRouter)
+app.use("/users", userRouter);
+AppDataSource.initialize().then(() => {
+  console.log("Database connected");
+});
 
 app.listen(port, () => {
-    console.log(`Server running on port : ${port}`)
-})
+  console.log(`Server running on port : ${port}`);
+});
